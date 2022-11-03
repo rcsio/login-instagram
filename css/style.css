@@ -1,0 +1,232 @@
+:root {
+  --ig-stroke: rgb(219, 219, 219);
+  --ig-primary-text: rgb(38, 38, 38);
+  --ig-secondary-text: rgb(142, 142, 142);
+  --ig-link: rgb(0, 55, 107);
+  --ig-primary-button: rgb(0, 149, 246);
+  --ig-secondary-background: rgb(250, 250, 250);
+  --ig-separator: rgb(219, 219, 219);
+  --ig-elevated-separator: rgb(219, 219, 219);
+  --fb-brand-text: #385185;
+
+  font-size: 14px;
+}
+
+/* Resets */
+body {
+  background-color: var(--ig-secondary-background);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Components */
+.ig-logo {
+  background-image: url(/img/1.png);
+  background-position: 0px -554px;
+  background-size: auto;
+  width: 175px;
+  height: 51px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.form {
+  display: grid;
+  max-width: calc(19rem + 4px);
+  margin-inline: auto;
+}
+
+.input {
+  border: 1px solid var(--ig-stroke);
+  border-radius: 3px;
+  font-size: calc(1rem - 2px);
+  height: calc((1rem * 2) + 8px);
+  padding: 0;
+  padding-left: calc(1rem - 6px);
+  color: var(--ig-primary-text);
+  background-color: var(--ig-secondary-background);
+}
+
+.btn {
+  border-radius: 4px;
+  border: transparent;
+  background: var(--ig-primary-button);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  height: calc((1rem * 2) + 2px);
+}
+
+.fb-logo {
+  background-image: url(/img/2.png);
+  background-repeat: no-repeat;
+  background-position: -414px -259px;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
+.btn-fb-login {
+  background: none;
+  border: none;
+  color: var(--fb-brand-text);
+  font-weight: 600;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: calc(1rem - 6px);
+  cursor: pointer;
+}
+
+a[href="forgot-password"] {
+  color: var(--ig-link);
+  font-size: calc(1rem - 2px);
+}
+
+a[href="sign-up"] {
+  font-weight: 600;
+  color: var(--ig-primary-button);
+}
+
+.line {
+  background-color: var(--ig-separator);
+  height: 1px;
+}
+
+.divider {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.or {
+  color: var(--ig-secondary-text);
+  font-size: calc(1rem - 1px);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.app-img {
+  display: inline-block;
+  height: calc((1rem * 3) - 2px);
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--ig-secondary-text);
+  font-size: calc(1rem - 2px);
+  margin: 0 calc(1rem - 6px) calc(1rem - 2px);
+}
+
+.copy {
+  font-size: calc(1rem - 2px);
+  color: var(--ig-secondary-text);
+  padding-block: calc(1rem - 2px);
+}
+
+/* Layout */
+input[type="password"] {
+  margin-top: calc(1rem - 8px);
+}
+
+#login {
+  margin-top: 1rem;
+}
+
+.ig-logo {
+  margin-block: 36px;
+}
+
+.btn-fb-login {
+  margin-inline: auto;
+}
+
+.divider {
+  margin-top: calc(1rem + 4px);
+}
+
+.divider .line {
+  flex-grow: 1;
+}
+
+.btn-fb-login {
+  margin-top: calc(2rem - 2px);
+}
+
+a[href="forgot-password"] {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.app-imgs {
+  margin-top: 20px;
+}
+
+body {
+  padding: 0 1rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  gap: 3rem;
+  min-width: 320px;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media only screen and (min-width: 450px) {
+  body {
+    padding-top: 3rem;
+  }
+
+  main {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ig-logo {
+    margin-top: 16px;
+  }
+
+  /* Utilities */
+  .well {
+    max-width: calc(24rem + 12px);
+    width: 100%;
+    border: 1px solid var(--ig-elevated-separator);
+    background-color: #fff;
+    border-radius: 1px;
+    padding: calc(1.5rem - 1px) calc(2.5rem + 5px);
+  }
+}
